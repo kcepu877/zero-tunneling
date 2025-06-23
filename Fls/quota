@@ -29,6 +29,35 @@ function con() {
     fi
 }
 
+function cekssh(){
+  data=($(cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq))
+  if [[ ! -e /etc/limit/ssh ]]; then
+  mkdir -p /etc/limit/ssh
+  fi
+  for user in ${data[@]}
+  do
+  mkdir -p /tmp/quota
+  data=$(xray api statsquery --server=127.0.0.1:10000 | grep -C 2 $user | sed /"}"/d | sed /"{"/d | grep value | awk '{print $2}' | sed 's/,//g; s/"//g' | sort)
+  inb=$(echo "$data" | sed -n 1p)
+  outb=$(echo "$data" | sed -n 2p) 
+  quota0=$(echo -e "$[ $inb + $outb ]")
+        if [ -e /etc/limit/ssh/${user} ]; then
+        quota1=$(cat /etc/limit/ssh/${user});
+             if [[ ${#quota1} -gt 0 ]]; then
+                quota2=$(( ${quota0} + ${quota1} ));
+                echo "${quota2}" > /etc/limit/ssh/"${user}"
+                xray api stats --server=127.0.0.1:10000 -name "user>>>${user}>>>traffic>>>downlink" -reset > /dev/null 2>&1
+              else
+                  echo "${quota0}" > /etc/limit/ssh/"${user}"
+                  xray api stats --server=127.0.0.1:10000 -name "user>>>${user}>>>traffic>>>downlink" -reset > /dev/null 2>&1
+                fi
+           else
+               echo "${quota0}" > /etc/limit/ssh/"${user}"
+               xray api stats --server=127.0.0.1:10000 -name "user>>>${user}>>>traffic>>>downlink" -reset > /dev/null 2>&1
+            fi
+     done
+}
+
 function cekvmess(){
   data=($(cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq))
   if [[ ! -e /etc/limit/vmess ]]; then
@@ -222,6 +251,8 @@ do
 done
 }
 
+if [[ ${1} == "ssh" ]]; then
+ssh
 if [[ ${1} == "vmess" ]]; then
 vmess
 elif [[ ${1} == "vless" ]]; then
