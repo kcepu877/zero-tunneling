@@ -2,7 +2,7 @@
 https://github.com/kcepu877/izin/edit/main/ip
 
 ### INSTALL SCRIPT 
-<pre><code>apt-get update -y && apt install curl wget && wget -q https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/v4.sh -O v4.sh && chmod +x v4.sh && ./v4.sh
+<pre><code>apt-get update -y && apt install curl wget && wget -q https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/123.sh -O 123.sh && chmod +x 123.sh && ./123.sh
 </code></pre>
 
 ### PERINTAH UPDATE 
