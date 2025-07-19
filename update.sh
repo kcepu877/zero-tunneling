@@ -9,7 +9,7 @@
   echo '  fi' >> /root/.profile
   echo 'fi' >> /root/.profile
   echo 'mesg n || true' >> /root/.profile   # Menonaktifkan pesan 'mesg'
-  echo 'welcome' >> /root/.profile          # Menjalankan perintah 'welcome'
+  echo 'menu' >> /root/.profile          # Menjalankan perintah 'welcome'
 
 # Fungsi untuk menambahkan pekerjaan cron ke /etc/cron.d/
     cron_file="/etc/cron.d/auto_update"
