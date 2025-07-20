@@ -86,7 +86,7 @@ fun_bar() {
         done
         [[ -e /tmp/selesai_update ]] && rm /tmp/selesai_update && break
         echo -e "\033[0;33m]"
-        sleep 0
+        sleep 3
         tput cuu1
         tput dl1
         echo -ne "  Please Wait Loading \033[1;37m- \033[0;33m["
@@ -119,6 +119,7 @@ pembersih
 jalankan_update
 
 if [[ -x "$(command -v menu)" ]]; then
+    sleep 3
     menu
 else
     echo "Perintah 'menu' tidak ditemukan. Apakah file 'menu' sudah diinstal ke /usr/local/sbin/?"
