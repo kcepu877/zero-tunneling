@@ -49,12 +49,11 @@
 
 
 pembersih() {
-fun_bar res1  # Menjalankan fungsi update jika versi baru terdeteksi
+    fun_bar res1 "instant"     # res1 tampilkan loading progress bar sebenarnya
 }
 
-# Fungsi untuk menjalankan update jika ada versi terbaru
 jalankan_update() {
-fun_bar res2  # Menjalankan fungsi update jika versi baru terdeteksi
+    fun_bar res2 "loading"     # res2 langsung selesai, tapi tetap kasih pesan update selesai
 }
 
 
@@ -62,28 +61,39 @@ fun_bar res2  # Menjalankan fungsi update jika versi baru terdeteksi
 # Fungsi progress bar
 fun_bar() {
     CMD[0]="$1"
+    MODE="$2"  # mode opsional: loading / instant
+
+    if [[ "$MODE" == "instant" ]]; then
+        # Jalankan perintah tanpa progress bar lama
+        ${CMD[0]} -y >/dev/null 2>&1
+        echo -e "\033[0;32mUpdate selesai! ✔\033[0m"
+        echo
+        return
+    fi
+
+    # Mode loading (default)
     (
         ${CMD[0]} -y >/dev/null 2>&1
         touch /tmp/selesai_update
     ) &
+
     tput civis
     echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
     while true; do
-        for ((i = 0; i < 18; i++)); do
+        for ((i=0; i<18; i++)); do
             echo -ne "\033[0;32m#"
             sleep 0.1s
         done
         [[ -e /tmp/selesai_update ]] && rm /tmp/selesai_update && break
         echo -e "\033[0;33m]"
-        sleep 0s
+        sleep 0
         tput cuu1
         tput dl1
         echo -ne "  Please Wait Loading \033[1;37m- \033[0;33m["
     done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[0m"
     tput cnorm
-    echo -e ""
-    
+    echo
 }
 
 res1() {
