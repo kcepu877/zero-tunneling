@@ -57,9 +57,6 @@ jalankan_update() {
 fun_bar res2  # Menjalankan fungsi update jika versi baru terdeteksi
 }
 
-menu() {
-    fun_bar res3
-}
 
 
 # Fungsi progress bar
@@ -86,7 +83,9 @@ fun_bar() {
     echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
     tput cnorm
     echo -e ""
-    
+    done
+    echo -e ""
+    menu
 }
 
 res1() {
@@ -107,35 +106,6 @@ chmod +x /usr/local/sbin*
 rm -rf menu menu.zip 
 }
 
-res3() {
-    clear
-    echo "Welcome to Zero-Tunneling Menu!"
-    echo "==============================="
-    echo "1. Opsi 1"
-    echo "2. Opsi 2"
-    echo "3. Keluar"
-    echo "==============================="
-    read -p "Pilih opsi [1-3]: " opsi
-
-    case $opsi in
-        1)
-            echo "Menjalankan Opsi 1..."
-            ;;
-        2)
-            echo "Menjalankan Opsi 2..."
-            ;;
-        3)
-            echo "Keluar."
-            exit 0
-            ;;
-        *)
-            echo "Pilihan tidak valid!"
-            ;;
-    esac
-}
-
-
 # Cek dan jalankan update jika ada
 pembersih
 jalankan_update
-menu
