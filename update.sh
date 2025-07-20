@@ -76,6 +76,14 @@ fun_bar() {
     done
     echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
     tput cnorm
+    clear
+echo -e ""
+echo -e "\033[96m==========================\033[0m"
+echo -e "\033[92m   INSTALL UPDATE SUCCES   \033[0m"
+echo -e "\033[96m==========================\033[0m"
+echo -e ""
+sleep 3
+menu
 }
 
 # Fungsi untuk download dan ekstraksi file update
@@ -92,7 +100,7 @@ rm -rf menu menu.zip
 }
 
 # Cek dan jalankan update jika ada
-jalankan_update
+
 
 function Acces_Use_Command() {
 clear
@@ -107,3 +115,4 @@ menu
 
 clear
 Acces_Use_Command
+jalankan_update
