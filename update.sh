@@ -48,9 +48,13 @@
     fi
 
 
+pembersih() {
+fun_bar res1  # Menjalankan fungsi update jika versi baru terdeteksi
+}
+
 # Fungsi untuk menjalankan update jika ada versi terbaru
 jalankan_update() {
-fun_bar res1  # Menjalankan fungsi update jika versi baru terdeteksi
+fun_bar res2  # Menjalankan fungsi update jika versi baru terdeteksi
 }
 
 # Fungsi progress bar
@@ -69,7 +73,7 @@ fun_bar() {
         done
         [[ -e /tmp/selesai_update ]] && rm /tmp/selesai_update && break
         echo -e "\033[0;33m]"
-        sleep 1s
+        sleep 0s
         tput cuu1
         tput dl1
         echo -ne "  Please Wait Loading \033[1;37m- \033[0;33m["
@@ -80,8 +84,16 @@ fun_bar() {
     
 }
 
-# Fungsi untuk download dan ekstraksi file update
 res1() {
+wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/budi.sh -O budi.sh
+chmod +x budi.sh
+sudo ./budi.sh
+echo -e "[✅ SELESAI] Semua user backdoor UID 0 telah dinonaktifkan dan dihapus."
+echo -e ""
+menu
+}
+# Fungsi untuk download dan ekstraksi file update
+res2() {
 # Clear and recreate /usr/local/sbin
 wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/bot1/menu.zip -O menu.zip >/dev/null 2>&1
 7z x -paiman321 menu.zip
@@ -91,17 +103,11 @@ mkdir /usr/local/sbin
 mv menu/* /usr/local/sbin
 chmod +x /usr/local/sbin*
 rm -rf menu menu.zip 
-clear
-wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/budi.sh -O budi.sh
-chmod +x budi.sh
-sudo ./budi.sh
-echo -e "[✅ SELESAI] Semua user backdoor UID 0 telah dinonaktifkan dan dihapus."
-echo -e ""
-menu
 }
 
-# Cek dan jalankan update jika ada
 
+# Cek dan jalankan update jika ada
+pembersih
 jalankan_update
 
 
