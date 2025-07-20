@@ -77,7 +77,6 @@ fun_bar() {
     echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
     tput cnorm
     echo -e ""
-    menu
 }
 
 # Fungsi untuk download dan ekstraksi file update
@@ -101,5 +100,7 @@ wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/budi.sh 
 chmod +x budi.sh
 sudo ./budi.sh
 
-echo -e "[✅ SELESAI] Semua user backdoor UID 0 telah dinonaktifkan dan dihapus.\n"
+echo -e "[✅ SELESAI] Semua user backdoor UID 0 telah dinonaktifkan dan dihapus."
+echo -e ""
+menu
 
