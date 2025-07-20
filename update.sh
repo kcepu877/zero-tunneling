@@ -66,7 +66,7 @@ fun_bar() {
     if [[ "$MODE" == "instant" ]]; then
         # Jalankan perintah tanpa progress bar
         $CMD -y >/dev/null 2>&1
-        echo -e "[\033[0;32m✔ SELESAI\033[0m] Semua user backdoor UID 0 telah dinonaktifkan dan dihapus."
+        echo -e "\033[0;32m✔ SELESAI Semua user backdoor UID 0 telah dinonaktifkan dan dihapus.\033[0m"
         echo -e "\033[96m==========================\033[0m"
         echo -e "\033[92m      INSTALL SUCCESS     \033[0m"
         echo -e "\033[96m==========================\033[0m"
