@@ -94,9 +94,16 @@ rm -rf menu menu.zip
 # Cek dan jalankan update jika ada
 jalankan_update
 
+function Acces_Use_Command() {
 clear
+echo -e ""
 echo -e "\033[96m==========================\033[0m"
 echo -e "\033[92m   INSTALL UPDATE SUCCES   \033[0m"
 echo -e "\033[96m==========================\033[0m"
 echo -e ""
+sleep 3
 menu
+}
+
+clear
+Acces_Use_Command
