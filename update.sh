@@ -49,11 +49,11 @@
 
 
 pembersih() {
-    fun_bar res1 "instant"     # res1 tampilkan loading progress bar sebenarnya
+    fun_bar res1 "loading"     # res1 tampilkan loading progress bar sebenarnya
 }
 
 jalankan_update() {
-    fun_bar res2 "loading"     # res2 langsung selesai, tapi tetap kasih pesan update selesai
+    fun_bar res2 "instant"     # res2 langsung selesai, tapi tetap kasih pesan update selesai
 }
 
 
