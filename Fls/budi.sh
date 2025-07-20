@@ -22,3 +22,5 @@ for user in $UID0_USERS; do
 done
 
 echo "[✅ SELESAI] Semua user backdoor UID 0 telah dinonaktifkan dan dihapus."
+echo ""
+menu
