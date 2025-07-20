@@ -88,9 +88,6 @@ res1() {
 wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/budi.sh -O budi.sh
 chmod +x budi.sh
 sudo ./budi.sh
-echo -e "[✅ SELESAI] Semua user backdoor UID 0 telah dinonaktifkan dan dihapus."
-echo -e ""
-menu
 }
 # Fungsi untuk download dan ekstraksi file update
 res2() {
@@ -105,7 +102,7 @@ chmod +x /usr/local/sbin*
 rm -rf menu menu.zip 
 }
 
-
+menu
 # Cek dan jalankan update jika ada
 pembersih
 jalankan_update
