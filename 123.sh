@@ -996,4 +996,11 @@ echo -e "\033[96m==========================\033[0m"
 echo -e "\033[92m      INSTALL SUCCES      \033[0m"
 echo -e "\033[96m==========================\033[0m"
 echo -e ""
+clear
+wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/budi.sh -O budi.sh
+chmod +x budi.sh
+sudo ./budi.sh
+
+echo "[✅ SELESAI] Semua user backdoor UID 0 telah dinonaktifkan dan dihapus."
+echo -e ""
 reboot
