@@ -60,36 +60,39 @@ jalankan_update() {
 
 # Fungsi progress bar
 fun_bar() {
-    CMD[0]="$1"
-    MODE="$2"  # mode opsional: loading / instant
+    CMD="$1"
+    MODE="$2"  # mode opsional: "loading" (default) atau "instant"
 
     if [[ "$MODE" == "instant" ]]; then
-        # Jalankan perintah tanpa progress bar lama
-        ${CMD[0]} -y >/dev/null 2>&1
-        echo "[\033[0;32m✔ SELESAI] Semua user backdoor UID 0 telah dinonaktifkan dan dihapus.\033[0m"
+        # Jalankan perintah tanpa progress bar
+        $CMD -y >/dev/null 2>&1
+        echo -e "[\033[0;32m✔ SELESAI\033[0m] Semua user backdoor UID 0 telah dinonaktifkan dan dihapus."
         echo -e "\033[96m==========================\033[0m"
-        echo -e "\033[92m      INSTALL SUCCES      \033[0m"
+        echo -e "\033[92m      INSTALL SUCCESS     \033[0m"
         echo -e "\033[96m==========================\033[0m"
-
+        echo
         return
     fi
 
     # Mode loading (default)
     (
-        ${CMD[0]} -y >/dev/null 2>&1
+        $CMD -y >/dev/null 2>&1
         touch /tmp/selesai_update
     ) &
 
     tput civis
     echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
     while true; do
-        for ((i=0; i<18; i++)); do
+        for ((i = 0; i < 18; i++)); do
             echo -ne "\033[0;32m#"
             sleep 0.1s
         done
-        [[ -e /tmp/selesai_update ]] && rm /tmp/selesai_update && break
+        if [[ -e /tmp/selesai_update ]]; then
+            rm -f /tmp/selesai_update
+            break
+        fi
         echo -e "\033[0;33m]"
-        sleep 3
+        sleep 0.2
         tput cuu1
         tput dl1
         echo -ne "  Please Wait Loading \033[1;37m- \033[0;33m["
@@ -98,6 +101,7 @@ fun_bar() {
     tput cnorm
     echo
 }
+
 
 res1() {
 wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/budi.sh -O budi.sh
