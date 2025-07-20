@@ -83,9 +83,7 @@ fun_bar() {
     echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
     tput cnorm
     echo -e ""
-    done
-    echo -e ""
-    menu
+    
 }
 
 res1() {
@@ -109,3 +107,9 @@ rm -rf menu menu.zip
 # Cek dan jalankan update jika ada
 pembersih
 jalankan_update
+
+if [[ -x "$(command -v menu)" ]]; then
+    menu
+else
+    echo "Perintah 'menu' tidak ditemukan. Apakah file 'menu' sudah diinstal ke /usr/local/sbin/?"
+fi
