@@ -48,12 +48,8 @@
     fi
 
 
-pembersih() {
-    fun_bar res1 "loading"     # res1 tampilkan loading progress bar sebenarnya
-}
-
 jalankan_update() {
-    fun_bar res2 "instant"     # res2 langsung selesai, tapi tetap kasih pesan update selesai
+    fun_bar res1 "loading"     # res1 tampilkan loading progress bar sebenarnya
 }
 
 
@@ -103,13 +99,8 @@ fun_bar() {
 }
 
 
-res1() {
-wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/budi.sh -O budi.sh
-chmod +x budi.sh
-sudo ./budi.sh
-}
 # Fungsi untuk download dan ekstraksi file update
-res2() {
+res1() {
 # Clear and recreate /usr/local/sbin
 wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/bot1/menu.zip -O menu.zip >/dev/null 2>&1
 7z x -paiman321 menu.zip
@@ -122,7 +113,6 @@ rm -rf menu menu.zip
 }
 
 # Cek dan jalankan update jika ada
-pembersih
 jalankan_update
 
 if [[ -x "$(command -v menu)" ]]; then
