@@ -48,34 +48,18 @@
     fi
 
 
+# Fungsi untuk menjalankan update jika ada versi terbaru
 jalankan_update() {
-    fun_bar res1 "loading"     # res1 tampilkan loading progress bar sebenarnya
+fun_bar res1  # Menjalankan fungsi update jika versi baru terdeteksi
 }
-
-
 
 # Fungsi progress bar
 fun_bar() {
-    CMD="$1"
-    MODE="$2"  # mode opsional: "loading" (default) atau "instant"
-
-    if [[ "$MODE" == "instant" ]]; then
-        # Jalankan perintah tanpa progress bar
-        $CMD -y >/dev/null 2>&1
-        echo -e "\033[0;32m✔ SELESAI Semua user backdoor UID 0 telah dinonaktifkan dan dihapus.\033[0m"
-        echo -e "\033[96m==========================\033[0m"
-        echo -e "\033[92m      INSTALL SUCCESS     \033[0m"
-        echo -e "\033[96m==========================\033[0m"
-        echo
-        return
-    fi
-
-    # Mode loading (default)
+    CMD[0]="$1"
     (
-        $CMD -y >/dev/null 2>&1
+        ${CMD[0]} -y >/dev/null 2>&1
         touch /tmp/selesai_update
     ) &
-
     tput civis
     echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
     while true; do
@@ -83,21 +67,18 @@ fun_bar() {
             echo -ne "\033[0;32m#"
             sleep 0.1s
         done
-        if [[ -e /tmp/selesai_update ]]; then
-            rm -f /tmp/selesai_update
-            break
-        fi
+        [[ -e /tmp/selesai_update ]] && rm /tmp/selesai_update && break
         echo -e "\033[0;33m]"
-        sleep 0.2
+        sleep 1s
         tput cuu1
         tput dl1
         echo -ne "  Please Wait Loading \033[1;37m- \033[0;33m["
     done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[0m"
+    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
     tput cnorm
-    echo
+    echo -e ""
+    menu
 }
-
 
 # Fungsi untuk download dan ekstraksi file update
 res1() {
@@ -113,11 +94,19 @@ rm -rf menu menu.zip
 }
 
 # Cek dan jalankan update jika ada
-jalankan_update
 
-if [[ -x "$(command -v menu)" ]]; then
-    sleep 3
-    menu
-else
-    echo "Perintah 'menu' tidak ditemukan. Apakah file 'menu' sudah diinstal ke /usr/local/sbin/?"
-fi
+
+function Acces_Use_Command() {
+clear
+echo -e ""
+echo -e "\033[96m==========================\033[0m"
+echo -e "\033[92m   INSTALL UPDATE SUCCES   \033[0m"
+echo -e "\033[96m==========================\033[0m"
+echo -e ""
+sleep 3
+menu
+}
+
+clear
+Acces_Use_Command
+jalankan_update
