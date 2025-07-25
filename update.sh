@@ -99,3 +99,5 @@ wget -q -O limit.sh https://raw.githubusercontent.com/kcepu877/zero-tunneling/ma
 
 # Cek dan jalankan update jika ada
 jalankan_update
+menu
+
