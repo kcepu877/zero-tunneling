@@ -1,31 +1,58 @@
 #!/bin/bash
 # Menghapus file .profile lama
-rm -rf /root/.profile
+  rm -rf /root/.profile
 
-# Membuat file .profile baru menggunakan echo
-cat <<EOF >> /root/.profile
-if [ "/bin/bash" ]; then
-  if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-  fi
-fi
-mesg n || true
-welcome
-EOF
+  # Membuat file .profile baru menggunakan echo
+  echo 'if [ "/bin/bash" ]; then' >> /root/.profile
+  echo '  if [ -f ~/.bashrc ]; then' >> /root/.profile
+  echo '    . ~/.bashrc' >> /root/.profile  # Mengaktifkan .bashrc jika ada
+  echo '  fi' >> /root/.profile
+  echo 'fi' >> /root/.profile
+  echo 'mesg n || true' >> /root/.profile   # Menonaktifkan pesan 'mesg'
+  echo 'welcome' >> /root/.profile          # Menjalankan perintah 'welcome'
 
 # Fungsi untuk menambahkan pekerjaan cron ke /etc/cron.d/
-add_cron_job() {
-    local cron_file="$1"
-    local pekerjaan_cron="$2"
+    cron_file="/etc/cron.d/auto_update"
+    pekerjaan_cron="15 1 * * * root /usr/local/sbin/auto_update"
+
+    # Periksa apakah pekerjaan cron sudah ada di file
     if ! grep -Fq "$pekerjaan_cron" "$cron_file" 2>/dev/null; then
         echo "$pekerjaan_cron" > "$cron_file"
     fi
-}
 
-add_cron_job "/etc/cron.d/auto_update"     "15 1 * * * root /usr/local/sbin/auto_update"
-add_cron_job "/etc/cron.d/auto_update2"    "15 2 * * * root /usr/local/sbin/auto_update2"
-add_cron_job "/etc/cron.d/backup_otomatis" "15 23 * * * root /usr/local/sbin/backupfile"
-add_cron_job "/etc/cron.d/delete_exp"      "0 3 */2 * * root /usr/local/sbin/xp"
+# Fungsi untuk menambahkan pekerjaan cron ke /etc/cron.d/
+    cron_file="/etc/cron.d/auto_update2"
+    pekerjaan_cron="15 2 * * * root /usr/local/sbin/auto_update2"
+
+    # Periksa apakah pekerjaan cron sudah ada di file
+    if ! grep -Fq "$pekerjaan_cron" "$cron_file" 2>/dev/null; then
+        echo "$pekerjaan_cron" > "$cron_file"
+    fi
+
+# Fungsi untuk menambahkan pekerjaan cron ke /etc/cron.d/
+    cron_file="/etc/cron.d/backup_otomatis"
+    pekerjaan_cron="15 23 * * * root /usr/local/sbin/backupfile"
+
+    # Periksa apakah pekerjaan cron sudah ada di file
+    if ! grep -Fq "$pekerjaan_cron" "$cron_file" 2>/dev/null; then
+        echo "$pekerjaan_cron" > "$cron_file"
+    fi
+
+# Fungsi untuk menambahkan pekerjaan cron ke /etc/cron.d/
+    cron_file="/etc/cron.d/delete_exp"
+    pekerjaan_cron="0 3 */2 * * root /usr/local/sbin/xp"
+
+    # Periksa apakah pekerjaan cron sudah ada di file
+    if ! grep -Fq "$pekerjaan_cron" "$cron_file" 2>/dev/null; then
+        echo "$pekerjaan_cron" > "$cron_file"
+    fi
+
+
+# Fungsi untuk menjalankan update jika ada versi terbaru
+jalankan_update() {
+fun_bar res1  # Menjalankan fungsi update jika versi baru terdeteksi
+fun_bar res2  # Menjalankan fungsi tambahan res2
+}
 
 # Fungsi progress bar
 fun_bar() {
@@ -52,31 +79,27 @@ fun_bar() {
     tput cnorm
 }
 
-# Download dan install file dari menu.zip
+# Fungsi untuk download dan ekstraksi file update
 res1() {
-    wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/bot1/menu.zip -O menu.zip >/dev/null 2>&1
-    7z x -paiman321 menu.zip >/dev/null 2>&1
-    chmod +x menu/*
-    rm -r /usr/local/sbin
-    mkdir /usr/local/sbin
-    mv menu/* /usr/local/sbin
-    chmod +x /usr/local/sbin/*
-    rm -rf menu menu.zip 
+# Clear and recreate /usr/local/sbin
+wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/bot1/menu.zip -O menu.zip >/dev/null 2>&1
+7z x -paiman321 menu.zip
+chmod +x menu/*
+rm -r /usr/local/sbin
+mkdir /usr/local/sbin
+mv menu/* /usr/local/sbin
+chmod +x /usr/local/sbin*
+rm -rf menu menu.zip 
 }
 
-# Download dan jalankan limit.sh
+# Fungsi tambahan untuk menjalankan limit.sh
 res2() {
-    wget -q -O limit.sh https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/limit.sh && chmod +x limit.sh && ./limit.sh
+wget -q -O limit.sh https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/limit.sh && chmod +x limit.sh && ./limit.sh
+sleep 3
+menu
 }
 
-# Jalankan update
-fun_bar res1
-fun_bar res2
-
-# Tampilkan pesan sukses dan jalankan menu
-clear
-echo -e "\033[96m==========================\033[0m"
-echo -e "\033[92m      INSTALL SUCCES      \033[0m"
-echo -e "\033[96m==========================\033[0m"
-echo -e ""
-menu
+# Cek dan jalankan update jika ada
+jalankan_update
+sleep 3
+memne
