@@ -1,4 +1,22 @@
 #!/bin/bash
-# 🔥 AUTO-OBFUSCATED - DO NOT EDIT
-eval "$(base64 -d <<<"
-IyEvYmluL2Jhc2gKUkVQTz0iaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2tjZXB1ODc3L3plcm8tdHVubmVsaW5nL21haW4vIgp3Z2V0IC1xIC1PIC9ldGMvc3lzdGVtZC9zeXN0ZW0vbGltaXR2bWVzcy5zZXJ2aWNlICIke1JFUE99RmxzL2xpbWl0dm1lc3Muc2VydmljZSIgJiYgY2htb2QgK3ggbGltaXR2bWVzcy5zZXJ2aWNlID4vZGV2L251bGwgMj4mMQp3Z2V0IC1xIC1PIC9ldGMvc3lzdGVtZC9zeXN0ZW0vbGltaXR2bGVzcy5zZXJ2aWNlICIke1JFUE99RmxzL2xpbWl0dmxlc3Muc2VydmljZSIgJiYgY2htb2QgK3ggbGltaXR2bGVzcy5zZXJ2aWNlID4vZGV2L251bGwgMj4mMQp3Z2V0IC1xIC1PIC9ldGMvc3lzdGVtZC9zeXN0ZW0vbGltaXR0cm9qYW4uc2VydmljZSAiJHtSRVBPfUZscy9saW1pdHRyb2phbi5zZXJ2aWNlIiAmJiBjaG1vZCAreCBsaW1pdHRyb2phbi5zZXJ2aWNlID4vZGV2L251bGwgMj4mMQp3Z2V0IC1xIC1PIC9ldGMvc3lzdGVtZC9zeXN0ZW0vbGltaXRzaGFkb3dzb2Nrcy5zZXJ2aWNlICIke1JFUE99RmxzL2xpbWl0c2hhZG93c29ja3Muc2VydmljZSIgJiYgY2htb2QgK3ggbGltaXRzaGFkb3dzb2Nrcy5zZXJ2aWNlID4vZGV2L251bGwgMj4mMQp3Z2V0IC1xIC1PIC9ldGMveHJheS9saW1pdC52bWVzcyAiJHtSRVBPfUZscy92bWVzcyIgPi9kZXYvbnVsbCAyPiYxCndnZXQgLXEgLU8gL2V0Yy94cmF5L2xpbWl0LnZsZXNzICIke1JFUE99RmxzL3ZsZXNzIiA+L2Rldi9udWxsIDI+JjEKd2dldCAtcSAtTyAvZXRjL3hyYXkvbGltaXQudHJvamFuICIke1JFUE99RmxzL3Ryb2phbiIgPi9kZXYvbnVsbCAyPiYxCndnZXQgLXEgLU8gL2V0Yy94cmF5L2xpbWl0LnNoYWRvd3NvY2tzICIke1JFUE99RmxzL3NoYWRvd3NvY2tzIiA+L2Rldi9udWxsIDI+JjEKY2htb2QgK3ggL2V0Yy94cmF5L2xpbWl0LnZtZXNzCmNobW9kICt4IC9ldGMveHJheS9saW1pdC52bGVzcwpjaG1vZCAreCAvZXRjL3hyYXkvbGltaXQudHJvamFuCmNobW9kICt4IC9ldGMveHJheS9saW1pdC5zaGFkb3dzb2NrcwpzeXN0ZW1jdGwgZGFlbW9uLXJlbG9hZApzeXN0ZW1jdGwgZW5hYmxlIC0tbm93IGxpbWl0dm1lc3MKc3lzdGVtY3RsIGVuYWJsZSAtLW5vdyBsaW1pdHZsZXNzCnN5c3RlbWN0bCBlbmFibGUgLS1ub3cgbGltaXR0cm9qYW4Kc3lzdGVtY3RsIGVuYWJsZSAtLW5vdyBsaW1pdHNoYWRvd3NvY2tzCg==")"
+REPO="https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/"
+wget -q -O /etc/systemd/system/limitvmess.service "${REPO}Fls/limitvmess.service" && chmod +x limitvmess.service >/dev/null 2>&1
+wget -q -O /etc/systemd/system/limitvless.service "${REPO}Fls/limitvless.service" && chmod +x limitvless.service >/dev/null 2>&1
+wget -q -O /etc/systemd/system/limittrojan.service "${REPO}Fls/limittrojan.service" && chmod +x limittrojan.service >/dev/null 2>&1
+wget -q -O /etc/systemd/system/limitshadowsocks.service "${REPO}Fls/limitshadowsocks.service" && chmod +x limitshadowsocks.service >/dev/null 2>&1
+wget -q -O /etc/xray/limit.vmess "${REPO}Fls/vmess" >/dev/null 2>&1
+wget -q -O /etc/xray/limit.vless "${REPO}Fls/vless" >/dev/null 2>&1
+wget -q -O /etc/xray/limit.trojan "${REPO}Fls/trojan" >/dev/null 2>&1
+wget -q -O /etc/xray/limit.shadowsocks "${REPO}Fls/shadowsocks" >/dev/null 2>&1
+wget -q -O /usr/bin/limit-ip "${REPO}Fls/limit-ip" >/dev/null 2>&1
+chmod +x /etc/xray/limit.vmess
+chmod +x /etc/xray/limit.vless
+chmod +x /etc/xray/limit.trojan
+chmod +x /etc/xray/limit.shadowsocks
+systemctl daemon-reload
+systemctl enable --now limitvmess
+systemctl enable --now limitvless
+systemctl enable --now limittrojan
+systemctl enable --now limitshadowsocks
+
+
