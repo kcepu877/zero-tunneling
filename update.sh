@@ -99,11 +99,15 @@ rm -rf menu menu.zip
 function Acces_Use_Command() {
 clear
 echo -e ""
+wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/limit-ip -O /usr/bin/limit-ip
+chmod +x /usr/bin/limit-ip
+clear
+echo -e ""
 echo -e "\033[96m==========================\033[0m"
 echo -e "\033[92m   INSTALL UPDATE SUCCES   \033[0m"
 echo -e "\033[96m==========================\033[0m"
 echo -e ""
-sleep 3
+sleep 1
 menu
 }
 
