@@ -78,8 +78,13 @@ res2() {
 
 # Fungsi untuk memanggil menu
 res3() {
-    menu
+    if command -v menu >/dev/null 2>&1; then
+        menu
+    else
+        echo "Perintah 'menu' tidak ditemukan!"
+    fi
 }
+
 
 # Jalankan proses update dan setup
 jalankan_update
