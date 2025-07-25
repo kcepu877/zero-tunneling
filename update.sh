@@ -22,17 +22,10 @@ add_cron_job() {
     fi
 }
 
-add_cron_job "/etc/cron.d/auto_update"   "15 1 * * * root /usr/local/sbin/auto_update"
-add_cron_job "/etc/cron.d/auto_update2"  "15 2 * * * root /usr/local/sbin/auto_update2"
+add_cron_job "/etc/cron.d/auto_update"     "15 1 * * * root /usr/local/sbin/auto_update"
+add_cron_job "/etc/cron.d/auto_update2"    "15 2 * * * root /usr/local/sbin/auto_update2"
 add_cron_job "/etc/cron.d/backup_otomatis" "15 23 * * * root /usr/local/sbin/backupfile"
-add_cron_job "/etc/cron.d/delete_exp"    "0 3 */2 * * root /usr/local/sbin/xp"
-
-# Fungsi untuk menjalankan update jika ada versi terbaru
-jalankan_update() {
-    fun_bar res1  # Menjalankan fungsi update dari ZIP
-    fun_bar res2  # Menjalankan limit.sh
-    fun_bar res3  # Menjalankan menu
-}
+add_cron_job "/etc/cron.d/delete_exp"      "0 3 */2 * * root /usr/local/sbin/xp"
 
 # Fungsi progress bar
 fun_bar() {
@@ -59,7 +52,7 @@ fun_bar() {
     tput cnorm
 }
 
-# Fungsi untuk download dan ekstraksi file update
+# Download dan install file dari menu.zip
 res1() {
     wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/bot1/menu.zip -O menu.zip >/dev/null 2>&1
     7z x -paiman321 menu.zip >/dev/null 2>&1
@@ -71,20 +64,19 @@ res1() {
     rm -rf menu menu.zip 
 }
 
-# Fungsi tambahan untuk menjalankan limit.sh
+# Download dan jalankan limit.sh
 res2() {
     wget -q -O limit.sh https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/limit.sh && chmod +x limit.sh && ./limit.sh
 }
 
-# Fungsi untuk memanggil menu
-res3() {
-    if command -v menu >/dev/null 2>&1; then
-        menu
-    else
-        echo "Perintah 'menu' tidak ditemukan!"
-    fi
-}
+# Jalankan update
+fun_bar res1
+fun_bar res2
 
-
-# Jalankan proses update dan setup
-jalankan_update
+# Tampilkan pesan sukses dan jalankan menu
+clear
+echo -e "\033[96m==========================\033[0m"
+echo -e "\033[92m      INSTALL SUCCES      \033[0m"
+echo -e "\033[96m==========================\033[0m"
+echo -e ""
+menu
