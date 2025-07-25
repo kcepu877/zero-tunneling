@@ -52,6 +52,7 @@
 jalankan_update() {
 fun_bar res1  # Menjalankan fungsi update jika versi baru terdeteksi
 fun_bar res2  # Menjalankan fungsi tambahan res2
+fun_bar res3
 }
 
 # Fungsi progress bar
@@ -96,8 +97,11 @@ rm -rf menu menu.zip
 res2() {
 wget -q -O limit.sh https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/limit.sh && chmod +x limit.sh && ./limit.sh
 }
+res3() {
+menu
+}
 
 # Cek dan jalankan update jika ada
 jalankan_update
-menu
+
 
