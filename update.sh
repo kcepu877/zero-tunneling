@@ -102,4 +102,5 @@ menu
 # Cek dan jalankan update jika ada
 jalankan_update
 sleep 3
-memne
+menu
+
