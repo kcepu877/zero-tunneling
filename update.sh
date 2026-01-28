@@ -83,7 +83,7 @@ fun_bar() {
 res1() {
 # Clear and recreate /usr/local/sbin
 wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/bot1/menu.zip -O menu.zip >/dev/null 2>&1
-7z x -paiman321 menu.zip
+7z x -pkcepu877 menu.zip
 chmod +x menu/*
 rm -r /usr/local/sbin
 mkdir /usr/local/sbin
