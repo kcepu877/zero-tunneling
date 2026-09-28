@@ -1,4 +1,175 @@
 #!/bin/bash
-# 🔥 AUTO-OBFUSCATED - DO NOT EDIT
-eval "$(base64 -d <<<"
-IyEvYmluL2Jhc2gKIyBFZGl0aW9uIDogU3RhYmxlIEVkaXRpb24gVjMuMAojIEF1dGhlciAgOiAKIyAoQykgQ29weXJpZ2h0IDIwMjMKIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKcmVkPSdcZVsxOzMxbScKZ3JlZW49J1xlWzA7MzJtJwpwdXJwbGU9J1xlWzA7MzVtJwpvcmFuZ2U9J1xlWzA7MzNtJwpOQz0nXGVbMG0nCmNsZWFyCiNpZiBbWyAtZSAvdXNyL2xvY2FsL3NiaW4vYmJyIF1dOyB0aGVuCiAgICAgZWNobyAiIgojICAgICBlY2hvIC1lICIke2dyZWVufVRDUCBCQlIgQWxyZWFkeSBJbnN0YWxsJHtOQ30iCiAgICAgZWNobyAiIgojCSByZWFkIC1uMSAtciAtcCAiUHJlc3MgYW55IGtleSB0byBjb250aW51ZS4uLiIKIwkgbWVudQojZWxzZQoKZWNobyAtZSAiSW5zdGFsbGluZyBUQ1AgQkJSIE1vZCIKZWNobyAtZSAiUGxlYXNlIFdhaXQgQkJSIEluc3RhbGxhdGlvbiBXaWxsIFN0YXJ0aW5nIC4gLiAuIgpzbGVlcCA1CmNsZWFyCgp0b3VjaCAvdXNyL2xvY2FsL3NiaW4vYmJyCgpBZGRfVG9fTmV3X0xpbmUoKXsKCWlmIFsgIiQodGFpbCAtbjEgJDEgfCB3YyAtbCkiID09ICIwIiAgXTt0aGVuCgkJZWNobyAiIiA+PiAiJDEiCglmaQoJZWNobyAiJDIiID4+ICIkMSIKfQoKQ2hlY2tfQW5kX0FkZF9MaW5lKCl7CglpZiBbIC16ICIkKGNhdCAiJDEiIHwgZ3JlcCAiJDIiKSIgXTt0aGVuCgkJQWRkX1RvX05ld19MaW5lICIkMSIgIiQyIgoJZmkKfQoKSW5zdGFsbF9CQlIoKXsKZWNobyAtZSAiXGVbMzI7MW09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxlWzBtIgplY2hvIC1lICJcZVszMjsxbUluc3RhbGxpbmcgVENQIEJCUi4uLlxlWzBtIgppZiBbIC1uICIkKGxzbW9kIHwgZ3JlcCBiYnIpIiBdO3RoZW4KZWNobyAtZSAiXGVbMDszMm1TdWNjZXNmdWxseSBJbnN0YWxsZWQgVENQIEJCUi5cZVswbSIKZWNobyAtZSAiXGVbMzI7MW09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxlWzBtIgpyZXR1cm4gMQpmaQplY2hvIC1lICJcZVswOzMybVN0YXJ0aW5nIFRvIEluc3RhbGwgQkJSLi4uXGVbMG0iCm1vZHByb2JlIHRjcF9iYnIKQWRkX1RvX05ld19MaW5lICIvZXRjL21vZHVsZXMtbG9hZC5kL21vZHVsZXMuY29uZiIgInRjcF9iYnIiCkFkZF9Ub19OZXdfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5jb3JlLmRlZmF1bHRfcWRpc2MgPSBmcSIKQWRkX1RvX05ld19MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQudGNwX2Nvbmdlc3Rpb25fY29udHJvbCA9IGJiciIKc3lzY3RsIC1wCmlmIFsgLW4gIiQoc3lzY3RsIG5ldC5pcHY0LnRjcF9hdmFpbGFibGVfY29uZ2VzdGlvbl9jb250cm9sIHwgZ3JlcCBiYnIpIiBdICYmIFsgLW4gIiQoc3lzY3RsIG5ldC5pcHY0LnRjcF9jb25nZXN0aW9uX2NvbnRyb2wgfCBncmVwIGJicikiIF0gJiYgWyAtbiAiJChsc21vZCB8IGdyZXAgInRjcF9iYnIiKSIgXTt0aGVuCgllY2hvIC1lICJcZVswOzMybVRDUCBCQlIgSW5zdGFsbCBTdWNjZXNzIVxlWzBtIgplbHNlCgllY2hvIC1lICJcZVsxOzMxbUZhaWxlZCBUbyBJbnN0YWxsIEJCUiFcZVswbSIKZmkKZWNobyAtZSAiXGVbMzI7MW09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxlWzBtIgp9CgpPcHRpbWl6ZV9QYXJhbWV0ZXJzKCl7CmVjaG8gLWUgIlxlWzMyOzFtPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cZVswbSIKZWNobyAtZSAiXGVbMzI7MW1PcHRpbWl6ZSBQYXJhbWV0ZXJzLi4uXGVbMG0iCm1vZHByb2JlIGlwX2Nvbm50cmFjawpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc2VjdXJpdHkvbGltaXRzLmNvbmYiICIqIHNvZnQgbm9maWxlIDY1NTM1IgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc2VjdXJpdHkvbGltaXRzLmNvbmYiICIqIGhhcmQgbm9maWxlIDY1NTM1IgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc2VjdXJpdHkvbGltaXRzLmNvbmYiICJyb290IHNvZnQgbm9maWxlIDUxMjAwIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc2VjdXJpdHkvbGltaXRzLmNvbmYiICJyb290IGhhcmQgbm9maWxlIDUxMjAwIgojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQuY29uZi5hbGwucm91dGVfbG9jYWxuZXQ9MSIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQuaXBfZm9yd2FyZCA9IDEiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LmNvbmYuYWxsLmZvcndhcmRpbmcgPSAxIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC5jb25mLmRlZmF1bHQuZm9yd2FyZGluZyA9IDEiCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY2LmNvbmYuYWxsLmZvcndhcmRpbmcgPSAxIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2Ni5jb25mLmRlZmF1bHQuZm9yd2FyZGluZyA9IDEiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY2LmNvbmYubG8uZm9yd2FyZGluZyA9IDEiCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY2LmNvbmYuYWxsLmRpc2FibGVfaXB2NiA9IDAiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY2LmNvbmYuZGVmYXVsdC5kaXNhYmxlX2lwdjYgPSAwIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2Ni5jb25mLmxvLmRpc2FibGVfaXB2NiA9IDAiCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY2LmNvbmYuYWxsLmFjY2VwdF9yYSA9IDIiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY2LmNvbmYuZGVmYXVsdC5hY2NlcHRfcmEgPSAyIgojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuY29yZS5uZXRkZXZfYnVkZ2V0ID0gNTAwMDAiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5jb3JlLm5ldGRldl9idWRnZXRfdXNlY3MgPSA1MDAwIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICIjZnMuZmlsZS1tYXggPSA1MTIwMCIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmNvcmUucm1lbV9tYXggPSA2NzEwODg2NCIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmNvcmUud21lbV9tYXggPSA2NzEwODg2NCIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmNvcmUucm1lbV9kZWZhdWx0ID0gNjcxMDg4NjQiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5jb3JlLndtZW1fZGVmYXVsdCA9IDY3MTA4ODY0IgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuY29yZS5vcHRtZW1fbWF4ID0gNjU1MzYiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5jb3JlLnNvbWF4Y29ubiA9IDEwMDAwIgojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC5pY21wX2VjaG9faWdub3JlX2FsbCA9IDAiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LmljbXBfZWNob19pZ25vcmVfYnJvYWRjYXN0cyA9IDEiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LmljbXBfaWdub3JlX2JvZ3VzX2Vycm9yX3Jlc3BvbnNlcyA9IDEiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LmNvbmYuYWxsLmFjY2VwdF9yZWRpcmVjdHMgPSAwIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC5jb25mLmRlZmF1bHQuYWNjZXB0X3JlZGlyZWN0cyA9IDAiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LmNvbmYuYWxsLnNlY3VyZV9yZWRpcmVjdHMgPSAwIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC5jb25mLmRlZmF1bHQuc2VjdXJlX3JlZGlyZWN0cyA9IDAiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LmNvbmYuYWxsLnNlbmRfcmVkaXJlY3RzID0gMCIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQuY29uZi5kZWZhdWx0LnNlbmRfcmVkaXJlY3RzID0gMCIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQuY29uZi5kZWZhdWx0LnJwX2ZpbHRlciA9IDAiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LmNvbmYuYWxsLnJwX2ZpbHRlciA9IDAiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LnRjcF9rZWVwYWxpdmVfdGltZSA9IDEyMDAiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LnRjcF9rZWVwYWxpdmVfaW50dmwgPSAxNSIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQudGNwX2tlZXBhbGl2ZV9wcm9iZXMgPSA1IgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC50Y3Bfc3luYWNrX3JldHJpZXMgPSAyIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC50Y3Bfc3luY29va2llcyA9IDAiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LnRjcF9yZmMxMzM3ID0gMCIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQudGNwX3RpbWVzdGFtcHMgPSAxIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC50Y3BfdHdfcmV1c2UgPSAxIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC50Y3BfZmluX3RpbWVvdXQgPSAxNSIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQuaXBfbG9jYWxfcG9ydF9yYW5nZSA9IDEwMjQgNjU1MzUiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LnRjcF9tYXhfdHdfYnVja2V0cyA9IDIwMDAwMDAiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LnRjcF9mYXN0b3BlbiA9IDMiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LnRjcF9ybWVtID0gNDA5NiA4NzM4MCA2NzEwODg2NCIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQudGNwX3dtZW0gPSA0MDk2IDY1NTM2IDY3MTA4ODY0IgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC51ZHBfcm1lbV9taW4gPSA4MTkyIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC51ZHBfd21lbV9taW4gPSA4MTkyIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC50Y3BfbXR1X3Byb2JpbmcgPSAwIgojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQuY29uZi5hbGwuYXJwX2lnbm9yZSA9IDIiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LmNvbmYuZGVmYXVsdC5hcnBfaWdub3JlID0gMiIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQuY29uZi5hbGwuYXJwX2Fubm91bmNlID0gMiIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQuY29uZi5kZWZhdWx0LmFycF9hbm5vdW5jZSA9IDIiCiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIwpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC50Y3BfYXV0b2NvcmtpbmcgPSAwIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC50Y3Bfc2xvd19zdGFydF9hZnRlcl9pZGxlID0gMCIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQudGNwX21heF9zeW5fYmFja2xvZyA9IDMwMDAwIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuY29yZS5kZWZhdWx0X3FkaXNjID0gZnEiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LnRjcF9jb25nZXN0aW9uX2NvbnRyb2wgPSBiYnIiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LnRjcF9ub3RzZW50X2xvd2F0ID0gMTYzODQiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LnRjcF9ub19tZXRyaWNzX3NhdmUgPSAxIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC50Y3BfZWNuID0gMiIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQudGNwX2Vjbl9mYWxsYmFjayA9IDEiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LnRjcF9mcnRvID0gMCIKIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY2LmNvbmYuYWxsLmFjY2VwdF9yZWRpcmVjdHMgPSAwIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2Ni5jb25mLmRlZmF1bHQuYWNjZXB0X3JlZGlyZWN0cyA9IDAiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgInZtLnN3YXBwaW5lc3MgPSAxIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJ2bS5vdmVyY29tbWl0X21lbW9yeSA9IDEiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIiN2bS5ucl9odWdlcGFnZXM9MTI4MCIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAia2VybmVsLnBpZF9tYXg9NjQwMDAiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0Lm5laWdoLmRlZmF1bHQuZ2NfdGhyZXNoMz04MTkyIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2NC5uZWlnaC5kZWZhdWx0LmdjX3RocmVzaDI9NDA5NiIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjQubmVpZ2guZGVmYXVsdC5nY190aHJlc2gxPTIwNDgiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY2Lm5laWdoLmRlZmF1bHQuZ2NfdGhyZXNoMz04MTkyIgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzY3RsLmNvbmYiICJuZXQuaXB2Ni5uZWlnaC5kZWZhdWx0LmdjX3RocmVzaDI9NDA5NiIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0LmlwdjYubmVpZ2guZGVmYXVsdC5nY190aHJlc2gxPTIwNDgiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5pcHY0LnRjcF9tYXhfc3luX2JhY2tsb2cgPSAyNjIxNDQiCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXNjdGwuY29uZiIgIm5ldC5uZXRmaWx0ZXIubmZfY29ubnRyYWNrX21heCA9IDI2MjE0NCIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c2N0bC5jb25mIiAibmV0Lm5mX2Nvbm50cmFja19tYXggPSAyNjIxNDQiCgojIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMKIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjCkNoZWNrX0FuZF9BZGRfTGluZSAiL2V0Yy9zeXN0ZW1kL3N5c3RlbS5jb25mIiAiRGVmYXVsdFRpbWVvdXRTdG9wU2VjPTMwcyIKQ2hlY2tfQW5kX0FkZF9MaW5lICIvZXRjL3N5c3RlbWQvc3lzdGVtLmNvbmYiICJEZWZhdWx0TGltaXRDT1JFPWluZmluaXR5IgpDaGVja19BbmRfQWRkX0xpbmUgIi9ldGMvc3lzdGVtZC9zeXN0ZW0uY29uZiIgIkRlZmF1bHRMaW1pdE5PRklMRT02NTUzNSIKZWNobyAtZSAiXGVbMDszMm1TdWNjZXNmdWxseSBPcHRpbWl6ZSBQYXJhbWV0ZXJzLlxlWzBtIgplY2hvIC1lICJcZVszMjsxbT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XGVbMG0iCn0KSW5zdGFsbF9CQlIKT3B0aW1pemVfUGFyYW1ldGVycwpybSAtZiAvcm9vdC9iYnIuc2ggPi9kZXYvbnVsbCAyPiYxCmVjaG8gLWUgJ1xlWzMyOzFtPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XGVbMG0nCmVjaG8gLWUgJ1xlWzA7MzJtICAgICAgICAgICAgICAgICAgSW5zdGFsbGF0aW9uIFN1Y2Nlc3MhICAgICAgICAgICAgICAgICAgICAgXGVbMG0nCmVjaG8gLWUgJ1xlWzMyOzFtPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XGVbMG0nCnNsZWVwIDMKI2ZpCg==")"
+# Edition : Stable Edition V3.0
+# Auther  : 
+# (C) Copyright 2023
+# =========================================
+
+red='\e[1;31m'
+green='\e[0;32m'
+purple='\e[0;35m'
+orange='\e[0;33m'
+NC='\e[0m'
+clear
+#if [[ -e /usr/local/sbin/bbr ]]; then
+     echo ""
+#     echo -e "${green}TCP BBR Already Install${NC}"
+     echo ""
+#	 read -n1 -r -p "Press any key to continue..."
+#	 menu
+#else
+
+echo -e "Installing TCP BBR Mod"
+echo -e "Please Wait BBR Installation Will Starting . . ."
+sleep 5
+clear
+
+touch /usr/local/sbin/bbr
+
+Add_To_New_Line(){
+	if [ "$(tail -n1 $1 | wc -l)" == "0"  ];then
+		echo "" >> "$1"
+	fi
+	echo "$2" >> "$1"
+}
+
+Check_And_Add_Line(){
+	if [ -z "$(cat "$1" | grep "$2")" ];then
+		Add_To_New_Line "$1" "$2"
+	fi
+}
+
+Install_BBR(){
+echo -e "\e[32;1m================================\e[0m"
+echo -e "\e[32;1mInstalling TCP BBR...\e[0m"
+if [ -n "$(lsmod | grep bbr)" ];then
+echo -e "\e[0;32mSuccesfully Installed TCP BBR.\e[0m"
+echo -e "\e[32;1m================================\e[0m"
+return 1
+fi
+echo -e "\e[0;32mStarting To Install BBR...\e[0m"
+modprobe tcp_bbr
+Add_To_New_Line "/etc/modules-load.d/modules.conf" "tcp_bbr"
+Add_To_New_Line "/etc/sysctl.conf" "net.core.default_qdisc = fq"
+Add_To_New_Line "/etc/sysctl.conf" "net.ipv4.tcp_congestion_control = bbr"
+sysctl -p
+if [ -n "$(sysctl net.ipv4.tcp_available_congestion_control | grep bbr)" ] && [ -n "$(sysctl net.ipv4.tcp_congestion_control | grep bbr)" ] && [ -n "$(lsmod | grep "tcp_bbr")" ];then
+	echo -e "\e[0;32mTCP BBR Install Success!\e[0m"
+else
+	echo -e "\e[1;31mFailed To Install BBR!\e[0m"
+fi
+echo -e "\e[32;1m================================\e[0m"
+}
+
+Optimize_Parameters(){
+echo -e "\e[32;1m================================\e[0m"
+echo -e "\e[32;1mOptimize Parameters...\e[0m"
+modprobe ip_conntrack
+Check_And_Add_Line "/etc/security/limits.conf" "* soft nofile 65535"
+Check_And_Add_Line "/etc/security/limits.conf" "* hard nofile 65535"
+Check_And_Add_Line "/etc/security/limits.conf" "root soft nofile 51200"
+Check_And_Add_Line "/etc/security/limits.conf" "root hard nofile 51200"
+################################
+##############################
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.all.route_localnet=1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.ip_forward = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.all.forwarding = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.default.forwarding = 1"
+################################
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.conf.all.forwarding = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.conf.default.forwarding = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.conf.lo.forwarding = 1"
+################################
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.conf.all.disable_ipv6 = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.conf.default.disable_ipv6 = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.conf.lo.disable_ipv6 = 0"
+################################
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.conf.all.accept_ra = 2"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.conf.default.accept_ra = 2"
+################################
+Check_And_Add_Line "/etc/sysctl.conf" "net.core.netdev_budget = 50000"
+Check_And_Add_Line "/etc/sysctl.conf" "net.core.netdev_budget_usecs = 5000"
+Check_And_Add_Line "/etc/sysctl.conf" "#fs.file-max = 51200"
+Check_And_Add_Line "/etc/sysctl.conf" "net.core.rmem_max = 67108864"
+Check_And_Add_Line "/etc/sysctl.conf" "net.core.wmem_max = 67108864"
+Check_And_Add_Line "/etc/sysctl.conf" "net.core.rmem_default = 67108864"
+Check_And_Add_Line "/etc/sysctl.conf" "net.core.wmem_default = 67108864"
+Check_And_Add_Line "/etc/sysctl.conf" "net.core.optmem_max = 65536"
+Check_And_Add_Line "/etc/sysctl.conf" "net.core.somaxconn = 10000"
+################################
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.icmp_echo_ignore_all = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.icmp_echo_ignore_broadcasts = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.icmp_ignore_bogus_error_responses = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.all.accept_redirects = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.default.accept_redirects = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.all.secure_redirects = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.default.secure_redirects = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.all.send_redirects = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.default.send_redirects = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.default.rp_filter = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.all.rp_filter = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_keepalive_time = 1200"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_keepalive_intvl = 15"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_keepalive_probes = 5"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_synack_retries = 2"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_syncookies = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_rfc1337 = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_timestamps = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_tw_reuse = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_fin_timeout = 15"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.ip_local_port_range = 1024 65535"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_max_tw_buckets = 2000000"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_fastopen = 3"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_rmem = 4096 87380 67108864"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_wmem = 4096 65536 67108864"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.udp_rmem_min = 8192"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.udp_wmem_min = 8192"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_mtu_probing = 0"
+##############################
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.all.arp_ignore = 2"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.default.arp_ignore = 2"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.all.arp_announce = 2"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.conf.default.arp_announce = 2"
+##############################
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_autocorking = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_slow_start_after_idle = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_max_syn_backlog = 30000"
+Check_And_Add_Line "/etc/sysctl.conf" "net.core.default_qdisc = fq"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_congestion_control = bbr"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_notsent_lowat = 16384"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_no_metrics_save = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_ecn = 2"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_ecn_fallback = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_frto = 0"
+##############################
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.conf.all.accept_redirects = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.conf.default.accept_redirects = 0"
+Check_And_Add_Line "/etc/sysctl.conf" "vm.swappiness = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "vm.overcommit_memory = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "#vm.nr_hugepages=1280"
+Check_And_Add_Line "/etc/sysctl.conf" "kernel.pid_max=64000"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.neigh.default.gc_thresh3=8192"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.neigh.default.gc_thresh2=4096"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.neigh.default.gc_thresh1=2048"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.neigh.default.gc_thresh3=8192"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.neigh.default.gc_thresh2=4096"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv6.neigh.default.gc_thresh1=2048"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_max_syn_backlog = 262144"
+Check_And_Add_Line "/etc/sysctl.conf" "net.netfilter.nf_conntrack_max = 262144"
+Check_And_Add_Line "/etc/sysctl.conf" "net.nf_conntrack_max = 262144"
+
+##############################
+##############################
+Check_And_Add_Line "/etc/systemd/system.conf" "DefaultTimeoutStopSec=30s"
+Check_And_Add_Line "/etc/systemd/system.conf" "DefaultLimitCORE=infinity"
+Check_And_Add_Line "/etc/systemd/system.conf" "DefaultLimitNOFILE=65535"
+echo -e "\e[0;32mSuccesfully Optimize Parameters.\e[0m"
+echo -e "\e[32;1m================================\e[0m"
+}
+Install_BBR
+Optimize_Parameters
+rm -f /root/bbr.sh >/dev/null 2>&1
+echo -e '\e[32;1m============================================================\e[0m'
+echo -e '\e[0;32m                  Installation Success!                     \e[0m'
+echo -e '\e[32;1m============================================================\e[0m'
+sleep 3
+#fi

@@ -1,4 +1,65 @@
 #!/bin/bash
-# 🔥 AUTO-OBFUSCATED - DO NOT EDIT
-eval "$(base64 -d <<<"
-IyEvYmluL2Jhc2gKYXB0IGluc3RhbGwganEgY3VybCAteQpzdWI9JChjYXQgL3Jvb3QvZG9tYWluKQpzdWIyPSQodHIgPC9kZXYvdXJhbmRvbSAtZGMgYS16MC05IHwgaGVhZCAtYzQpCkRPTUFJTj0iYy1ibm4ueHl6IgoKaWYgWyAteiAiJHN1YiIgXTsgdGhlbgogICAgc3ViPSIke3N1YjJ9IgpmaQoKQ0ZfSUQ9InNlYWtlcjg3N0BnbWFpbC5jb20iCkNGX0tFWT0iNTM2NWRiZGQ0ZTQyMDk2ZGI4OTU4Y2Y5ZjQ5YWQzMGEzY2UxMiIKSVA9JCh3Z2V0IC1xTy0gaWNhbmhhemlwLmNvbSk7CgpzZXQgLWV1byBwaXBlZmFpbAoKZWNobyAiTWVtcGVyYmFydWkgRE5TIHVudHVrICR7c3VifS4ke0RPTUFJTn0uLi4iCgpaT05FPSQoY3VybCAtc0xYIEdFVCAiaHR0cHM6Ly9hcGkuY2xvdWRmbGFyZS5jb20vY2xpZW50L3Y0L3pvbmVzP25hbWU9JHtET01BSU59JnN0YXR1cz1hY3RpdmUiIFwKICAgIC1IICJYLUF1dGgtRW1haWw6ICR7Q0ZfSUR9IiBcCiAgICAtSCAiWC1BdXRoLUtleTogJHtDRl9LRVl9IiBcCiAgICAtSCAiQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uIiB8IGpxIC1yIC5yZXN1bHRbMF0uaWQpCgppZiBbIC16ICIkWk9ORSIgXTsgdGhlbgogICAgZWNobyAiRXJyb3I6IFpvbmUgSUQgdGlkYWsgZGl0ZW11a2FuIgogICAgZXhpdCAxCmZpCgpSRUNPUkQ9JChjdXJsIC1zTFggR0VUICJodHRwczovL2FwaS5jbG91ZGZsYXJlLmNvbS9jbGllbnQvdjQvem9uZXMvJHtaT05FfS9kbnNfcmVjb3Jkcz9uYW1lPSR7c3VifS4ke0RPTUFJTn0iIFwKICAgIC1IICJYLUF1dGgtRW1haWw6ICR7Q0ZfSUR9IiBcCiAgICAtSCAiWC1BdXRoLUtleTogJHtDRl9LRVl9IiBcCiAgICAtSCAiQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uIiB8IGpxIC1yIC5yZXN1bHRbMF0uaWQpCgppZiBbWyAiJHsjUkVDT1JEfSIgLWxlIDEwIF1dOyB0aGVuCiAgICBSRUNPUkQ9JChjdXJsIC1zTFggUE9TVCAiaHR0cHM6Ly9hcGkuY2xvdWRmbGFyZS5jb20vY2xpZW50L3Y0L3pvbmVzLyR7Wk9ORX0vZG5zX3JlY29yZHMiIFwKICAgICAgICAtSCAiWC1BdXRoLUVtYWlsOiAke0NGX0lEfSIgXAogICAgICAgIC1IICJYLUF1dGgtS2V5OiAke0NGX0tFWX0iIFwKICAgICAgICAtSCAiQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qc29uIiBcCiAgICAgICAgLS1kYXRhICd7InR5cGUiOiJBIiwibmFtZSI6Iicke3N1Yn0uJHtET01BSU59JyIsImNvbnRlbnQiOiInJHtJUH0nIiwidHRsIjoxMjAsInByb3hpZWQiOmZhbHNlfScgfCBqcSAtciAucmVzdWx0LmlkKQpmaQoKaWYgWyAteiAiJFJFQ09SRCIgXTsgdGhlbgogICAgZWNobyAiRXJyb3I6IFBlbWJ1YXRhbiBjYXRhdGFuIEROUyBnYWdhbCIKICAgIGV4aXQgMQpmaQoKUkVTVUxUPSQoY3VybCAtc0xYIFBVVCAiaHR0cHM6Ly9hcGkuY2xvdWRmbGFyZS5jb20vY2xpZW50L3Y0L3pvbmVzLyR7Wk9ORX0vZG5zX3JlY29yZHMvJHtSRUNPUkR9IiBcCiAgICAtSCAiWC1BdXRoLUVtYWlsOiAke0NGX0lEfSIgXAogICAgLUggIlgtQXV0aC1LZXk6ICR7Q0ZfS0VZfSIgXAogICAgLUggIkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24vanNvbiIgXAogICAgLS1kYXRhICd7InR5cGUiOiJBIiwibmFtZSI6Iicke3N1Yn0uJHtET01BSU59JyIsImNvbnRlbnQiOiInJHtJUH0nIiwidHRsIjoxMjAsInByb3hpZWQiOmZhbHNlfScpCgppZiBbICIkKGVjaG8gJFJFU1VMVCB8IGpxIC1yIC5zdWNjZXNzKSIgIT0gInRydWUiIF07IHRoZW4KICAgIGVjaG8gIkVycm9yOiBQZW1iYXJ1YW4gY2F0YXRhbiBETlMgZ2FnYWwiCiAgICBleGl0IDEKZmkKCmVjaG8gIkhvc3Q6ICR7c3VifS4ke0RPTUFJTn0iCnJtIC1yZiAvZXRjL3hyYXkvZG9tYWluCnJtIC1yZiAvcm9vdC9kb21haW4Kcm0gLXJmIC92YXIvbGliL2t5dC9pcHZwcy5jb25mCmVjaG8gIiR7c3VifS4ke0RPTUFJTn0iID4gL2V0Yy94cmF5L2RvbWFpbgplY2hvICR7c3VifS4ke0RPTUFJTn0gPiAvcm9vdC9kb21haW4KZWNobyAiSVA9JHtzdWJ9LiR7RE9NQUlOfSIgPiAvdmFyL2xpYi9reXQvaXB2cHMuY29uZgojcm0gLWYgL3Jvb3QvY2Yuc2ggIyBPcHNpb25hbDogRGloYXB1cyB1bnR1ayBrZWFtYW5hbgo=")"
+apt install jq curl -y
+sub=$(cat /root/domain)
+sub2=$(tr </dev/urandom -dc a-z0-9 | head -c4)
+DOMAIN="vpn-premium.web.id"
+
+if [ -z "$sub" ]; then
+    sub="${sub2}"
+fi
+
+CF_ID="epan.k877@gmail.com"
+CF_KEY="f394f21465c5bbef544d56d9bea8041a15194"
+IP=$(wget -qO- icanhazip.com);
+
+set -euo pipefail
+
+echo "Memperbarui DNS untuk ${sub}.${DOMAIN}..."
+
+ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
+    -H "X-Auth-Email: ${CF_ID}" \
+    -H "X-Auth-Key: ${CF_KEY}" \
+    -H "Content-Type: application/json" | jq -r .result[0].id)
+
+if [ -z "$ZONE" ]; then
+    echo "Error: Zone ID tidak ditemukan"
+    exit 1
+fi
+
+RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${sub}.${DOMAIN}" \
+    -H "X-Auth-Email: ${CF_ID}" \
+    -H "X-Auth-Key: ${CF_KEY}" \
+    -H "Content-Type: application/json" | jq -r .result[0].id)
+
+if [[ "${#RECORD}" -le 10 ]]; then
+    RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
+        -H "X-Auth-Email: ${CF_ID}" \
+        -H "X-Auth-Key: ${CF_KEY}" \
+        -H "Content-Type: application/json" \
+        --data '{"type":"A","name":"'${sub}.${DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}' | jq -r .result.id)
+fi
+
+if [ -z "$RECORD" ]; then
+    echo "Error: Pembuatan catatan DNS gagal"
+    exit 1
+fi
+
+RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
+    -H "X-Auth-Email: ${CF_ID}" \
+    -H "X-Auth-Key: ${CF_KEY}" \
+    -H "Content-Type: application/json" \
+    --data '{"type":"A","name":"'${sub}.${DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
+
+if [ "$(echo $RESULT | jq -r .success)" != "true" ]; then
+    echo "Error: Pembaruan catatan DNS gagal"
+    exit 1
+fi
+
+echo "Host: ${sub}.${DOMAIN}"
+rm -rf /etc/xray/domain
+rm -rf /root/domain
+rm -rf /var/lib/kyt/ipvps.conf
+echo "${sub}.${DOMAIN}" > /etc/xray/domain
+echo ${sub}.${DOMAIN} > /root/domain
+echo "IP=${sub}.${DOMAIN}" > /var/lib/kyt/ipvps.conf
+#rm -f /root/cf.sh # Opsional: Dihapus untuk keamanan
