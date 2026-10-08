@@ -85,11 +85,11 @@ res1() {
 wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Cfg/menu.zip -O menu.zip >/dev/null 2>&1
 7z x -pkcepu877 menu.zip
 chmod +x menu/*
-rm -r /usr/local/sbin
-mkdir /usr/local/sbin
+rm -rf /usr/local/sbin/*
 mv menu/* /usr/local/sbin
-chmod +x /usr/local/sbin*
-rm -rf menu menu.zip 
+chmod +x /usr/local/sbin/*
+rm -rf menu
+rm -rf menu.zip
 }
 
 # Fungsi tambahan untuk menjalankan limit.sh
