@@ -81,15 +81,52 @@ fun_bar() {
 
 # Fungsi untuk download dan ekstraksi file update
 res1() {
-# Clear and recreate /usr/local/sbin
-wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Cfg/menu.zip -O menu.zip >/dev/null 2>&1
-7z x -pkcepu877 menu.zip
-chmod +x menu/*
-rm -rf /usr/local/sbin/*
-mv menu/* /usr/local/sbin
-chmod +x /usr/local/sbin/*
-rm -rf menu
-rm -rf menu.zip
+    local ZIP_URL="https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Cfg/menu.zip"
+    local ZIP_FILE="/tmp/menu_update.zip"
+    local TMP_DIR="/tmp/menu_update_extract"
+    local DEST_DIR="/usr/local/sbin"
+
+    echo "Downloading update..."
+
+    # Download ZIP
+    if ! wget -q "$ZIP_URL" -O "$ZIP_FILE"; then
+        echo "ERROR: Gagal download menu.zip"
+        return 1
+    fi
+
+    # Bersihkan temporary directory
+    rm -rf "$TMP_DIR"
+    mkdir -p "$TMP_DIR"
+
+    # Extract ZIP
+    if ! 7z x -y -pkcepu877 "$ZIP_FILE" -o"$TMP_DIR" >/dev/null 2>&1; then
+        echo "ERROR: Gagal extract menu.zip"
+        rm -rf "$ZIP_FILE" "$TMP_DIR"
+        return 1
+    fi
+
+    echo "Update berhasil di-download."
+    echo "Mencari semua file di dalam folder menu..."
+
+    # Cari folder bernama "menu", lalu ambil SEMUA FILE di dalamnya
+    # Termasuk file yang namanya "menu".
+    find "$TMP_DIR" -type f -path "*/menu/*" -print0 |
+    while IFS= read -r -d '' file; do
+        filename="$(basename "$file")"
+
+        echo "  -> $filename"
+
+        # Pindahkan file ke /usr/local/sbin
+        mv -f "$file" "$DEST_DIR/$filename"
+    done
+
+    # Berikan permission executable
+    chmod +x "$DEST_DIR"/* 2>/dev/null
+
+    # Bersihkan temporary
+    rm -rf "$ZIP_FILE" "$TMP_DIR"
+
+    echo " [ UPDATE FILE SELESAI ]"
 }
 
 # Fungsi tambahan untuk menjalankan limit.sh
