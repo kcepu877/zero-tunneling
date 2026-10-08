@@ -269,7 +269,7 @@ echo -e "    ----------------------------------"
 echo -e "     \e[1;32m1)\e[0m Your Domain (Recommended)"
 echo -e "     \e[1;32m2)\e[0m Random Domain "
 echo -e "   ------------------------------------"
-host="2"  # Otomatis pilih opsi nomor 2
+read -p "   Please Select Number [1-2]: " host  # Diubah agar meminta input manual
 echo ""
 if [[ $host == "1" ]]; then
 clear
@@ -300,6 +300,7 @@ print_install "Random Subdomain/Domain is Used"
 clear
 fi
 }
+
 clear
 restart_system() {
 USRSC=$(wget -qO- ${izinsc} | grep $ipsaya | awk '{print $2}')
