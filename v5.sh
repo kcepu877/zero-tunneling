@@ -756,7 +756,7 @@ print_success "All Packet"
 function menu(){
 clear
 print_install "Memasang Menu Packet"
-wget ${REPO}bot1/menu.zip
+wget ${REPO}Cfg/menu.zip
 7z x -pkcepu877 menu.zip
 chmod +x menu/*
 mv menu/* /usr/local/sbin
