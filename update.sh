@@ -82,7 +82,7 @@ fun_bar() {
 # Fungsi untuk download dan ekstraksi file update
 res1() {
 # Clear and recreate /usr/local/sbin
-wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/bot1/menu.zip -O menu.zip >/dev/null 2>&1
+wget https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Cfg/menu.zip -O menu.zip >/dev/null 2>&1
 7z x -pkcepu877 menu.zip
 chmod +x menu/*
 rm -r /usr/local/sbin
