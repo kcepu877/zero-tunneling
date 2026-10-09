@@ -482,8 +482,55 @@ print_success "Password SSH"
 }
 
 function api_tunnel() { 
-apt install dos2unix; wget ${REPO}api.sh && chmod +x api.sh && dos2unix api.sh && bash api.sh; clear; }
+apt install dos2unix; wget ${REPO}api.sh && chmod +x api.sh && dos2unix api.sh && bash api.sh; clear; 
 
+}
+
+function server_app() {
+    echo -e "\e[38;5;82m⚙️  Configuring PM2 Service...\e[0m"
+
+    # Install PM2 kalau belum ada
+    if ! command -v pm2 >/dev/null; then
+        npm install -g pm2
+    fi
+
+    # Kill port 5888 kalau ada yang pegang
+    CEK_PORT=$(lsof -i:5888 | awk 'NR>1 {print $2}' | sort -u)
+    if [[ -n "$CEK_PORT" ]]; then
+        echo -e "\e[38;5;130m🔧 Closing port 5888...\e[0m"
+        echo "$CEK_PORT" | xargs kill -9
+    fi
+
+    # Start api.js pakai PM2 (anti-mati mode)
+    cd /usr/bin/API-TUNNELING
+    pm2 delete api-tunnel 2>/dev/null
+    pm2 start api.js --name api-tunnel \
+        --max-memory-restart 500M \
+        --autorestart true \
+        --restart-delay 3000 \
+        --exp-backoff-restart-delay 100 \
+        --max-restarts 9999
+    pm2 save
+
+    # Auto-start pas reboot
+    env PATH=$PATH:/usr/bin pm2 startup systemd -u root --hp /root
+    pm2 save
+
+    # Cron watchdog
+    cat > /usr/local/bin/pm2-watchdog.sh <<'EOF'
+#!/bin/bash
+if ! pm2 list 2>/dev/null | grep -q "online"; then
+    pm2 resurrect >/dev/null 2>&1
+fi
+EOF
+    chmod +x /usr/local/bin/pm2-watchdog.sh
+    (crontab -l 2>/dev/null | grep -v "pm2-watchdog"; \
+     echo "*/5 * * * * /usr/local/bin/pm2-watchdog.sh") | crontab -
+
+    echo -e "\n🔍 Server Status:"
+    pm2 list
+    echo -e "\e[38;5;82m✨ All systems operational! (Anti-Mati Mode ON)\e[0m\n"
+}
 function udp_mini(){
     clear
     print_install "Memasang Service Limit IP & Quota & UDP-Mini"
@@ -909,6 +956,8 @@ enable_services
 restart_system
 }
 instal
+fixudp
+server_app
 echo ""
 history -c
 rm -rf /root/menu
@@ -934,8 +983,6 @@ chmod +x /usr/local/sbin/limit.sh
 /usr/local/sbin/limit.sh
 echo -e ""
 wget -O /usr/bin/ws "https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/ws" >/dev/null 2>&1 && wget -O /usr/bin/tun.conf "https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Cfg/tun.conf" >/dev/null 2>&1 && wget -O /etc/systemd/system/ws.service "https://raw.githubusercontent.com/kcepu877/zero-tunneling/main/Fls/ws.service" >/dev/null 2>&1 && chmod +x /etc/systemd/system/ws.service && chmod +x /usr/bin/ws && chmod 644 /usr/bin/tun.conf && systemctl disable ws && systemctl stop ws && systemctl enable ws && systemctl start ws && systemctl restart ws
-clear
-fixudp
 clear
 echo -e "\033[96m==========================\033[0m"
 echo -e "\033[92m      INSTALL SUCCES      \033[0m"
